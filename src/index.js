@@ -11,7 +11,7 @@ export default {
     let host = '';
     try { host = new URL(target).hostname; } catch {}
     if (host !== 'stores.barnesandnoble.com') {
-      return new Response('Only stores.barnesandnoble.com is allowed', { status: 400, headers: cors });
+      return new Response('404 NOT FOUND', { status: 400, headers: cors });
     }
 
     const res = await fetch(target, {
